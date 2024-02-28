@@ -1,16 +1,17 @@
-import logo from "../assets/Images/logo.png";
-import avatar from "../assets/Images/avatar.png";
-import HeaderItem from "./HeaderItem";
+import { useState } from "react";
+import logo from "./../assets/Images/logo.png";
+import avatar from "./../assets/Images/avatar.png";
 import {
   HiHome,
-  HiStar,
-  HiTv,
   HiMagnifyingGlass,
+  HiStar,
   HiPlayCircle,
+  HiTv,
 } from "react-icons/hi2";
-import { HiPlus } from "react-icons/hi";
-
-const Header = () => {
+import { HiPlus, HiDotsVertical } from "react-icons/hi";
+import HeaderItem from "./HeaderItem";
+function Header() {
+  const [toggle, setToggle] = useState(false);
   const menu = [
     {
       name: "HOME",
@@ -37,22 +38,51 @@ const Header = () => {
       icon: HiTv,
     },
   ];
-
   return (
-    <div className="flex items-center gap-8 justify-between p-6">
-      <div className="flex gap-8 items-center">
+    <div className="flex items-center justify-between p-5">
+      <div className="flex  gap-8 items-center">
         <img
           src={logo}
-          alt="disney plus logo"
-          className="w-[80px] md:w-[115px] object-cover"
+          className="w-[80px] 
+        md:w-[115px] object-cover"
         />
-        {menu.map((item) => (
-          <HeaderItem name={item.name} Icon={item.icon} key={item.name} />
-        ))}
+        <div className="hidden lg:flex gap-8">
+          {menu.map((item) => (
+            <HeaderItem name={item.name} Icon={item.icon} key={item.name} />
+          ))}
+        </div>
+        <div className="flex lg:hidden gap-5">
+          {menu.map(
+            (item, index) =>
+              index < 3 && (
+                <HeaderItem name={""} Icon={item.icon} key={item.name} />
+              )
+          )}
+          <div className="lg:hidden" onClick={() => setToggle(!toggle)}>
+            <HeaderItem name={""} Icon={HiDotsVertical} />
+            {toggle ? (
+              <div
+                className="absolute mt-4 bg-[#121212] 
+            border-[1px] border-gray-700 p-3 md:p-4 px-2 md:px-4 md:py-4 py-2"
+              >
+                {menu.map(
+                  (item, index) =>
+                    index > 2 && (
+                      <HeaderItem
+                        name={item.name}
+                        Icon={item.icon}
+                        key={item.name}
+                      />
+                    )
+                )}
+              </div>
+            ) : null}
+          </div>
+        </div>
       </div>
-      <img src={avatar} alt="avatar icon" className="w-[40px]" />
+      <img src={avatar} className="w-[40px] " />
     </div>
   );
-};
+}
 
 export default Header;
