@@ -6,13 +6,13 @@ import HrMovieCard from "./HrMovieCard";
 function MovieList({ genreId, index_ }) {
   const [movieList, setMovieList] = useState([]);
   const elementRef = useRef(null);
+
   useEffect(() => {
     getMovieByGenreId();
   }, []);
 
   const getMovieByGenreId = () => {
     GlobalApi.getMovieByGenreId(genreId).then((resp) => {
-      // console.log(resp.data.results)
       setMovieList(resp.data.results);
     });
   };
@@ -24,7 +24,7 @@ function MovieList({ genreId, index_ }) {
     element.scrollLeft -= 500;
   };
   return (
-    <div className="relative text-center">
+    <div className="relative ">
       <IoChevronBackOutline
         onClick={() => slideLeft(elementRef.current)}
         className={`text-[50px] text-white 
