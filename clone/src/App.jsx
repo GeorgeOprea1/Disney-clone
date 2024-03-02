@@ -5,7 +5,19 @@ import { useState } from "react";
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
 
-  return <div className="">{!loggedIn ? <LogInPage /> : <ContentPage />}</div>;
+  const handleSubscribeClicked = () => {
+    setLoggedIn(true);
+  };
+
+  return (
+    <div className="">
+      {!loggedIn ? (
+        <LogInPage handleSubscribeClicked={handleSubscribeClicked} />
+      ) : (
+        <ContentPage />
+      )}
+    </div>
+  );
 }
 
 export default App;

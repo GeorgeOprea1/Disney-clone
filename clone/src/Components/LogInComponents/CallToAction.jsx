@@ -1,7 +1,7 @@
 import loginBackground from "../../assets/Images/loginBackground.avif";
 import { IoIosArrowDown } from "react-icons/io";
 
-const CallToAction = () => {
+const CallToAction = ({ handleSubscribeClicked }) => {
   return (
     <div className="relative h-[100vh] ">
       <img
@@ -27,6 +27,7 @@ const CallToAction = () => {
         <button
           id="subscribe"
           className=" w-[60%] text-sm lg:text-2xl text-white bg-blue-600 cursor-pointer hover:bg-blue-700 py-3"
+          onClick={handleSubscribeClicked}
         >
           Subscribe now
         </button>
