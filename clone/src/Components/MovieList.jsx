@@ -23,8 +23,9 @@ function MovieList({ genreId, index_ }) {
   const slideLeft = (element) => {
     element.scrollLeft -= 500;
   };
+
   return (
-    <div className="relative ">
+    <div className="relative">
       <IoChevronBackOutline
         onClick={() => slideLeft(elementRef.current)}
         className={`text-[50px] text-white 
@@ -41,9 +42,9 @@ function MovieList({ genreId, index_ }) {
         {movieList.map((item) => (
           <>
             {index_ % 3 == 0 ? (
-              <HrMovieCard movie={item} />
+              <HrMovieCard key={item.id} movie={item} />
             ) : (
-              <MovieCard movie={item} />
+              <MovieCard key={item.id} movie={item} />
             )}
           </>
         ))}

@@ -44,7 +44,7 @@ function Header() {
         <img
           src={logo}
           className="w-[80px] 
-        md:w-[115px] object-cover"
+        md:w-[115px] object-cover hover:scale-110 cursor-pointer"
         />
         <div className="hidden lg:flex gap-8">
           {menu.map((item) => (
@@ -80,7 +80,7 @@ function Header() {
           </div>
         </div>
       </div>
-      <img src={avatar} className="w-[40px] " />
+      <img src={avatar} className="w-[40px] cursor-pointer hover:scale-110" />
     </div>
   );
 }

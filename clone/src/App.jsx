@@ -1,19 +1,11 @@
-import Header from "./Components/Header";
-import Slider from "./Components/Slider";
-import ProductionHouse from "./Components/ProductionHouse";
-import GenreMovieList from "./Components/GenreMovieList";
-import Footer from "./Components/Footer";
+import ContentPage from "./Pages/ContentPage";
+import LogInPage from "./Pages/LogInPage";
+import { useState } from "react";
 
 function App() {
-  return (
-    <div className="">
-      <Header />
-      <Slider />
-      <ProductionHouse />
-      <GenreMovieList />
-      <Footer />
-    </div>
-  );
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  return <div className="">{!loggedIn ? <LogInPage /> : <ContentPage />}</div>;
 }
 
 export default App;
