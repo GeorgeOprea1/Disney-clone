@@ -1,9 +1,12 @@
 import Footer from "../Components/Footer";
-import CallToAction from "../Components/CallToAction";
+import CallToAction from "../Components/LogInComponents/CallToAction.jsx";
+import Availability from "../Components/LogInComponents/Availability.jsx";
+
 const LogInPage = () => {
   return (
-    <div>
+    <div className="flex flex-col gap-4">
       <CallToAction />
+      <Availability />
       <Footer />
     </div>
   );

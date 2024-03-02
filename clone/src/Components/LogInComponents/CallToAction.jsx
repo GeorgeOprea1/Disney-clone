@@ -1,4 +1,4 @@
-import loginBackground from "../assets/Images/loginBackground.avif";
+import loginBackground from "../../assets/Images/loginBackground.avif";
 import { IoIosArrowDown } from "react-icons/io";
 
 const CallToAction = () => {
@@ -12,12 +12,12 @@ const CallToAction = () => {
       {/* you have to figure out how to add a linear gradient for a better transition between background and images  */}
       <button
         id="login"
-        className="w-[20%] lg:w-[15%] text-base text-white border-white border-[2px] bg-transparent absolute top-5 right-10 hover:text-black hover:bg-white hover:border-none cursor-pointer "
+        className="w-[30%] lg:w-[15%] text-base text-white border-white border-[2px] bg-transparent absolute top-5 right-10 hover:text-black hover:bg-white hover:border-none cursor-pointer "
       >
         Log in
       </button>
-      <div className="w-[60%] flex flex-col items-center justify-center  gap-5 absolute top-[35%] right-[20%] text-center">
-        <h1 className="text-white  font-bold text-[35px] lg:text-[50px] ">
+      <div className="w-[60%] flex flex-col items-center justify-center  gap-5 absolute top-[30%] right-[20%] text-center">
+        <h1 className="text-white  font-bold text-[30px] lg:text-[50px] ">
           Enjoy original productions, famous movies, unmissable series and much
           more.
         </h1>
@@ -26,7 +26,7 @@ const CallToAction = () => {
         </p>
         <button
           id="subscribe"
-          className=" w-[50%] text-base lg:text-2xl text-white bg-blue-600 cursor-pointer hover:bg-blue-700 py-3"
+          className=" w-[60%] text-sm lg:text-2xl text-white bg-blue-600 cursor-pointer hover:bg-blue-700 py-3"
         >
           Subscribe now
         </button>
@@ -41,7 +41,7 @@ const CallToAction = () => {
           required.
         </p>
       </div>
-      <IoIosArrowDown className="text-white text-3xl absolute bottom-10 right-[50%] animate-bounce" />
+      <IoIosArrowDown className="text-white text-3xl absolute bottom-5 right-[50%]  animate-bounce" />
     </div>
   );
 };
