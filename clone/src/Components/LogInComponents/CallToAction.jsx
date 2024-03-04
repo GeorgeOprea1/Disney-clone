@@ -3,11 +3,12 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const CallToAction = ({ handleSubscribeClicked }) => {
   return (
-    <div className="h-[100vh] w-full ">
+    <div className="h-[100vh] w-full  ">
       <img
         src={loginBackground}
         alt="start page background image"
-        className="w-full max-h-screen min-h-[60%]"
+        className="w-full max-h-screen min-h-[60%] bg-blend-overlay"
+        id="cta-img"
       />
       {/* you have to figure out how to add a linear gradient for a better transition between background and images  */}
       <button

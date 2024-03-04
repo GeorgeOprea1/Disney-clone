@@ -39,12 +39,14 @@ const FAQ = () => {
       question: "How much does Disney+ cost?",
       answer:
         "Disney+ subscription costs 36.99 lei a month or 369.90 lei a year.",
+      listItems: [],
     },
     {
       id: 4,
       question: "What devices are supported",
       answer:
         "Disney+ supports mobile devices, web browsers, game consoles, set-top boxes, and smart TVs.",
+      listItems: [],
     },
     {
       id: 5,
