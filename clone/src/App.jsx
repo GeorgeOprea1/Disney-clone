@@ -1,5 +1,5 @@
 import ContentPage from "./Pages/ContentPage";
-import LogInPage from "./Pages/LogInPage";
+import StartPage from "./Pages/StartPage";
 import { useState } from "react";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="">
       {!loggedIn ? (
-        <LogInPage handleSubscribeClicked={handleSubscribeClicked} />
+        <StartPage handleSubscribeClicked={handleSubscribeClicked} />
       ) : (
         <ContentPage />
       )}
