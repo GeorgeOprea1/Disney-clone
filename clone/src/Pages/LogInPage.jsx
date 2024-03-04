@@ -6,7 +6,7 @@ import Watch from "../Components/LogInComponents/Watch.jsx";
 
 const LogInPage = ({ handleSubscribeClicked }) => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-6 bg-gray-950">
       <CallToAction handleSubscribeClicked={handleSubscribeClicked} />
       <Watch />
       <FAQ />

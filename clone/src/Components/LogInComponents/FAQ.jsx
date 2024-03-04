@@ -82,7 +82,7 @@ const FAQ = () => {
         {faqData.map((item, index) => (
           <div
             key={item.id}
-            className="w-[80%] bg-gray-950 text-white p-6 flex flex-col gap-6"
+            className="w-[80%] bg-gray-900 text-white p-6 flex flex-col gap-6"
           >
             <div
               className=" flex  justify-between items-centerw-full cursor-pointer text-xl lg:text-2xl "

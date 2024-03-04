@@ -3,7 +3,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const CallToAction = ({ handleSubscribeClicked }) => {
   return (
-    <div className="relative h-[100vh] ">
+    <div className="h-[100vh]">
       <img
         src={loginBackground}
         alt="start page background image"
@@ -29,7 +29,7 @@ const CallToAction = ({ handleSubscribeClicked }) => {
           className=" w-[60%] text-sm lg:text-2xl text-white bg-blue-600 cursor-pointer hover:bg-blue-700 py-3"
           onClick={handleSubscribeClicked}
         >
-          Subscribe now
+          Sign Up Now
         </button>
 
         <h2 className="text-white text-sm lg:text-base">
@@ -42,7 +42,7 @@ const CallToAction = ({ handleSubscribeClicked }) => {
           required.
         </p>
       </div>
-      <IoIosArrowDown className="text-white text-3xl absolute bottom-5 right-[50%]  animate-bounce" />
+      <IoIosArrowDown className="text-white text-3xl absolute bottom-5  right-[45%] lg:right-[50%]  animate-bounce" />
     </div>
   );
 };
