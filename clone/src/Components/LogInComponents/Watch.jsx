@@ -13,7 +13,7 @@ const Watch = () => {
         Enjoy the world&apos;s greatest stories - anytime, anywhere.
       </h2>
       <img src={watch} alt="some random image" />
-      <div className="flex flex-col lg:flex-row items-center lg:items-start  w-[90%] gap-6">
+      <div className="flex flex-col lg:flex-row items-center lg:items  w-[90%] gap-6">
         <div className="flex flex-col items-center  text-center gap-6 h-full">
           <div className="border-[2px] border-blue-400 rounded-full p-6 ">
             <PiFilmReel className="text-blue-400 w-[50px] h-[50px] " />
