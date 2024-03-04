@@ -3,7 +3,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const CallToAction = ({ handleSubscribeClicked }) => {
   return (
-    <div className="h-[100vh]">
+    <div className="h-[100vh] w-full ">
       <img
         src={loginBackground}
         alt="start page background image"
@@ -12,7 +12,7 @@ const CallToAction = ({ handleSubscribeClicked }) => {
       {/* you have to figure out how to add a linear gradient for a better transition between background and images  */}
       <button
         id="login"
-        className="w-[30%] lg:w-[15%] text-base text-white border-white border-[2px] bg-transparent absolute top-5 right-10 hover:text-black hover:bg-white hover:border-none cursor-pointer "
+        className="w-[100px] lg:w-[150px] text-base text-white border-white border-[2px] bg-transparent absolute top-5 right-10 hover:text-black hover:bg-white hover:border-none cursor-pointer "
       >
         Log in
       </button>
@@ -26,7 +26,7 @@ const CallToAction = ({ handleSubscribeClicked }) => {
         </p>
         <button
           id="subscribe"
-          className=" w-[60%] text-sm lg:text-2xl text-white bg-blue-600 cursor-pointer hover:bg-blue-700 py-3"
+          className=" w-[300px] lg:w-[400px] text-sm lg:text-2xl text-white bg-blue-600 cursor-pointer hover:bg-blue-700 py-3"
           onClick={handleSubscribeClicked}
         >
           Sign Up Now

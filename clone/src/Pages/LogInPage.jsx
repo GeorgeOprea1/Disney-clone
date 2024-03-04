@@ -7,7 +7,7 @@ import Only from "../Components/LogInComponents/Only.jsx";
 
 const LogInPage = ({ handleSubscribeClicked }) => {
   return (
-    <div className=" w-full flex flex-col items-center gap-10 bg-gray-950">
+    <div className=" w-full flex flex-col items-center  bg-gray-950">
       <CallToAction handleSubscribeClicked={handleSubscribeClicked} />
       <Only />
       <Watch />

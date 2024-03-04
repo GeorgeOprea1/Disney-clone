@@ -5,7 +5,7 @@ import { MdDevices } from "react-icons/md";
 
 const Watch = () => {
   return (
-    <div className="text-white flex flex-col w-full items-center gap-10">
+    <div className="text-white flex flex-col w-full items-center gap-10 mt-20">
       <h1 className="font-bold  text-3xl lg:text-5xl text-center">
         Watch the way you want
       </h1>
@@ -13,7 +13,7 @@ const Watch = () => {
         Enjoy the world&apos;s greatest stories - anytime, anywhere.
       </h2>
       <img src={watch} alt="some random image" />
-      <div className="flex flex-col lg:flex-row items-center lg:items  w-[90%] gap-6">
+      <div className="flex flex-col lg:flex-row items-center justify-center  w-[90%] gap-20 ">
         <div className="flex flex-col items-center  text-center gap-6 h-full">
           <div className="border-[2px] border-blue-400 rounded-full p-6 ">
             <PiFilmReel className="text-blue-400 w-[50px] h-[50px] " />
