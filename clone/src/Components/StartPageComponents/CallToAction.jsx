@@ -7,8 +7,7 @@ const CallToAction = ({ handleSubscribeClicked }) => {
       <img
         src={loginBackground}
         alt="start page background image"
-        className="w-full max-h-screen min-h-[60%] bg-blend-overlay"
-        id="cta-img"
+        className="w-full max-h-screen min-h-[60%] "
       />
       {/* you have to figure out how to add a linear gradient for a better transition between background and images  */}
       <button
