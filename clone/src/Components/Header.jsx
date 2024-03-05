@@ -10,6 +10,8 @@ import {
 } from "react-icons/hi2";
 import { HiPlus, HiDotsVertical } from "react-icons/hi";
 import HeaderItem from "./HeaderItem";
+import { Link } from "react-router-dom";
+
 function Header() {
   const [toggle, setToggle] = useState(false);
   const menu = [
@@ -41,11 +43,13 @@ function Header() {
   return (
     <div className="flex items-center justify-between p-5">
       <div className="flex  gap-8 items-center">
-        <img
-          src={logo}
-          className="w-[80px] 
+        <Link to="/">
+          <img
+            src={logo}
+            className="w-[80px] 
         md:w-[115px] object-cover hover:scale-110 cursor-pointer"
-        />
+          />
+        </Link>
         <div className="hidden lg:flex gap-8">
           {menu.map((item) => (
             <HeaderItem name={item.name} Icon={item.icon} key={item.name} />
