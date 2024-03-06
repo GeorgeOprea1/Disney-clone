@@ -1,6 +1,6 @@
 import ContentPage from "./Pages/ContentPage";
 import StartPage from "./Pages/StartPage";
-import LogInPage from "./Pages/LogInPage";
+
 import { useState } from "react";
 
 function App() {

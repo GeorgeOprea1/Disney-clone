@@ -7,7 +7,7 @@ import Only from "../Components/StartPageComponents/Only.jsx";
 
 const StartPage = ({ handleSubscribeClicked }) => {
   return (
-    <div className=" w-full flex flex-col items-center  bg-gray-950">
+    <div className=" w-full flex flex-col items-center bg-gray-950">
       <CallToAction handleSubscribeClicked={handleSubscribeClicked} />
       <Only />
       <Watch />
