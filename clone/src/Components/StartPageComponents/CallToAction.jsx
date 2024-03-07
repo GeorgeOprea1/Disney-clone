@@ -2,7 +2,7 @@ import loginBackground from "../../assets/Images/loginBackground.avif";
 import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
 
-const CallToAction = ({ handleSubscribeClicked }) => {
+const CallToAction = () => {
   return (
     <div className="h-[100vh] w-full  ">
       <img
@@ -27,11 +27,10 @@ const CallToAction = ({ handleSubscribeClicked }) => {
         <p className="text-white font-bold text-lg lg:text-xl">
           All at no extra cost. Cancel anytime.*
         </p>
-        <Link to="/content">
+        <Link to="/signup">
           <button
             id="subscribe"
             className=" w-[300px] lg:w-[400px] text-sm lg:text-2xl text-white bg-blue-600 cursor-pointer hover:bg-blue-700 py-3"
-            onClick={handleSubscribeClicked}
           >
             Sign Up Now
           </button>

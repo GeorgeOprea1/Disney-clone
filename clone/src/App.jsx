@@ -1,26 +1,14 @@
-import ContentPage from "./Pages/ContentPage";
-import StartPage from "./Pages/StartPage";
+import React, { useState } from "react";
+import "./index.css";
+import StartPage from "./Pages/StartPage.jsx";
+import LogInPage from "./Pages/LogInPage.jsx";
 
-import { useState } from "react";
-
-function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
-
-  const handleSubscribeClicked = () => {
-    setLoggedIn(true);
-  };
-
+const App = () => {
   return (
     <div className="">
-      {/* <LogInPage /> */}
-
-      {!loggedIn ? (
-        <StartPage handleSubscribeClicked={handleSubscribeClicked} />
-      ) : (
-        <ContentPage />
-      )}
+      <StartPage />
     </div>
   );
-}
+};
 
 export default App;
