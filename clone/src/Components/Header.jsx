@@ -41,6 +41,17 @@ function Header() {
       icon: HiTv,
     },
   ];
+
+  const handleToggleClick = () => {
+    setToggle(!toggle);
+    setToggleUser(false);
+  };
+
+  const handleAvatarClick = () => {
+    setToggleUser(!toggleUser);
+    setToggle(false);
+  };
+
   return (
     <div className=" w-full flex items-center justify-between ">
       <div className="flex  gap-8 items-center">
@@ -63,7 +74,7 @@ function Header() {
                 <HeaderItem name={""} Icon={item.icon} key={item.name} />
               )
           )}
-          <div className="lg:hidden" onClick={() => setToggle(!toggle)}>
+          <div className="lg:hidden" onClick={handleToggleClick}>
             <HeaderItem name={""} Icon={HiDotsVertical} />
             {toggle ? (
               <div
@@ -94,7 +105,7 @@ function Header() {
           src={avatar}
           alt="User Avatar"
           className="w-[40px] cursor-pointer hover:scale-110 "
-          onClick={() => setToggleUser(!toggleUser)}
+          onClick={handleAvatarClick}
         />{" "}
         {toggleUser && (
           <div className="w-full border-t-2 flex flex-col gap-3 items-start  absolute z-10 top-[70px] bg-[#121212] p-4 lg:p-8">
