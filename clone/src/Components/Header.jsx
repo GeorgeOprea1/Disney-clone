@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 
 function Header() {
   const [toggle, setToggle] = useState(false);
+  const [toggleUser, setToggleUser] = useState(false);
   const menu = [
     {
       name: "HOME",
@@ -84,7 +85,46 @@ function Header() {
           </div>
         </div>
       </div>
-      <img src={avatar} className="w-[40px] cursor-pointer hover:scale-110" />
+      <div
+        className={`w-[150px] flex items-center justify-center flex-col relative p-4 ${
+          toggleUser ? "bg-[#121212]" : ""
+        }`}
+      >
+        <img
+          src={avatar}
+          alt="User Avatar"
+          className="w-[40px] cursor-pointer hover:scale-110 "
+          onClick={() => setToggleUser(!toggleUser)}
+        />{" "}
+        {toggleUser && (
+          <div className="w-full border-t-2 flex flex-col gap-3 items-start  absolute z-10 top-[70px] bg-[#121212] p-4">
+            <button
+              id="profileBtn"
+              className="text-lg text-white cursor-pointer border-none bg-[#121212]"
+            >
+              Profile
+            </button>
+            <button
+              id="accountBtn"
+              className="text-lg text-white cursor-pointer  border-none bg-[#121212]"
+            >
+              Account
+            </button>
+            <button
+              id="helpBtn"
+              className="text-lg text-white cursor-pointer  border-none bg-[#121212]"
+            >
+              Help
+            </button>
+            <button
+              id="logoutBtn"
+              className="text-lg text-white cursor-pointer  border-none bg-[#121212]"
+            >
+              Logout
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
