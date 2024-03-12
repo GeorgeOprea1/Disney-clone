@@ -42,13 +42,13 @@ function Header() {
     },
   ];
   return (
-    <div className="flex items-center justify-between p-5">
+    <div className=" w-full flex items-center justify-between ">
       <div className="flex  gap-8 items-center">
         <Link to="/">
           <img
             src={logo}
             className="w-[80px] 
-        md:w-[115px] object-cover hover:scale-110 cursor-pointer"
+        lg:w-[115px] object-cover hover:scale-110 cursor-pointer"
           />
         </Link>
         <div className="hidden lg:flex gap-8">
@@ -86,7 +86,7 @@ function Header() {
         </div>
       </div>
       <div
-        className={`w-[150px] flex items-center justify-center flex-col relative p-4 ${
+        className={`w-[30%] lg:w-[150px] flex items-center justify-center flex-col relative p-4 lg:p-6 ${
           toggleUser ? "bg-[#121212]" : ""
         }`}
       >
@@ -97,31 +97,31 @@ function Header() {
           onClick={() => setToggleUser(!toggleUser)}
         />{" "}
         {toggleUser && (
-          <div className="w-full border-t-2 flex flex-col gap-3 items-start  absolute z-10 top-[70px] bg-[#121212] p-4">
-            <button
+          <div className="w-full border-t-2 flex flex-col gap-3 items-start  absolute z-10 top-[70px] bg-[#121212] p-4 lg:p-8">
+            <h1
               id="profileBtn"
-              className="text-lg text-white cursor-pointer border-none bg-[#121212]"
+              className="w-full text-sm lg:text-lg text-white cursor-pointer border-none bg-[#121212]"
             >
               Profile
-            </button>
-            <button
+            </h1>
+            <h1
               id="accountBtn"
-              className="text-lg text-white cursor-pointer  border-none bg-[#121212]"
+              className="text-sm lg:text-lg text-white cursor-pointer  border-none bg-[#121212]"
             >
               Account
-            </button>
-            <button
+            </h1>
+            <h1
               id="helpBtn"
-              className="text-lg text-white cursor-pointer  border-none bg-[#121212]"
+              className="text-sm lg:text-lg text-white cursor-pointer  border-none bg-[#121212]"
             >
               Help
-            </button>
-            <button
+            </h1>
+            <h1
               id="logoutBtn"
-              className="text-lg text-white cursor-pointer  border-none bg-[#121212]"
+              className="text-sm lg:text-lg text-white cursor-pointer  border-none bg-[#121212]"
             >
               Logout
-            </button>
+            </h1>
           </div>
         )}
       </div>
