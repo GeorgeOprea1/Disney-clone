@@ -9,14 +9,20 @@ import { auth } from "../src/firebase/config.js";
 
 const App = () => {
   const [user, setUser] = useState(null);
+  const [authReady, setAuthReady] = useState(false);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setUser(user);
+      setAuthReady(true);
     });
 
     return () => unsubscribe();
   }, []);
+
+  if (!authReady) {
+    return null;
+  }
 
   return (
     <div className="">
@@ -27,9 +33,7 @@ const App = () => {
           <Route path="/signup" element={<SignUpPage />} />
           <Route
             path="/content"
-            element={
-              user ? <ContentPage user={user} /> : <Navigate to="/login" />
-            }
+            element={user ? <ContentPage user={user} /> : <Navigate to="/" />}
           />
         </Routes>
       </BrowserRouter>

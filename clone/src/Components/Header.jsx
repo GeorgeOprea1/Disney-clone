@@ -58,6 +58,7 @@ function Header() {
     signOut(auth)
       .then(() => {})
       .catch((error) => {});
+    localStorage.removeItem("user");
   };
 
   return (
