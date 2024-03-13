@@ -11,6 +11,8 @@ import {
 import { HiPlus, HiDotsVertical } from "react-icons/hi";
 import HeaderItem from "./HeaderItem";
 import { Link } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import { auth } from "../../src/firebase/config.js";
 
 function Header() {
   const [toggle, setToggle] = useState(false);
@@ -50,6 +52,12 @@ function Header() {
   const handleAvatarClick = () => {
     setToggleUser(!toggleUser);
     setToggle(false);
+  };
+
+  const handleSignOut = () => {
+    signOut(auth)
+      .then(() => {})
+      .catch((error) => {});
   };
 
   return (
@@ -130,8 +138,9 @@ function Header() {
             <h1
               id="logoutBtn"
               className="text-sm lg:text-lg text-white cursor-pointer  border-none bg-[#121212]"
+              onClick={handleSignOut}
             >
-              Logout
+              Log out
             </h1>
           </div>
         )}
