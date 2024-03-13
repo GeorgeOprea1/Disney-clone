@@ -64,13 +64,11 @@ function Header() {
   return (
     <div className=" w-full flex items-center justify-between sticky top-0  bg-[#131520] z-40 ">
       <div className="flex  gap-8 items-center">
-        <Link to="/">
-          <img
-            src={logo}
-            className="w-[80px] 
+        <img
+          src={logo}
+          className="w-[80px] 
         lg:w-[115px] object-cover hover:scale-110 cursor-pointer"
-          />
-        </Link>
+        />
         <div className="hidden lg:flex gap-8">
           {menu.map((item) => (
             <HeaderItem name={item.name} Icon={item.icon} key={item.name} />
