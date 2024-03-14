@@ -1,5 +1,5 @@
 import Footer from "../Components/Footer";
-import logo from "../assets/Images/logo.png";
+import logo from "../assets/Images/logo.avif";
 import InputBox from "../Components/LogInComponents/InputBox";
 import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";

@@ -1,4 +1,4 @@
-import logo from "../assets/Images/logo.png";
+import logo from "../assets/Images/logo.avif";
 
 const Footer = () => {
   const footerData = [

@@ -1,8 +1,8 @@
-import disney from "./../assets/Images/disney.png";
-import marvel from "./../assets/Images/marvel.png";
-import nationalG from "./../assets/Images/nationalG.png";
-import pixar from "./../assets/Images/pixar.png";
-import starwar from "./../assets/Images/starwar.png";
+import disney from "./../assets/Images/disney.avif";
+import marvel from "./../assets/Images/marvel.avif";
+import nationalG from "./../assets/Images/nationalG.avif";
+import pixar from "./../assets/Images/pixar.avif";
+import starwar from "./../assets/Images/starwar.avif";
 
 import starwarV from "./../assets/Videos/star-wars.mp4";
 import disneyV from "./../assets/Videos/disney.mp4";

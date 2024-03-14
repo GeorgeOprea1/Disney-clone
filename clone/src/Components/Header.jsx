@@ -1,6 +1,6 @@
 import { useState } from "react";
-import logo from "./../assets/Images/logo.png";
-import avatar from "./../assets/Images/avatar.png";
+import logo from "./../assets/Images/logo.avif";
+import avatar from "./../assets/Images/avatar.avif";
 import {
   HiHome,
   HiMagnifyingGlass,
