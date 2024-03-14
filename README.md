@@ -5,7 +5,7 @@
 ![content](https://github.com/GeorgeOprea1/Disney-clone/assets/127131773/57206492-543f-473e-8564-5d2f5b2eaca4)
 
 
- **Disney Plus clone app, mirroring the intuitive interface of the original.**
+ ***A Disney Plus clone app, mirroring the intuitive interface of the original app.***
 
 ## Features
 
